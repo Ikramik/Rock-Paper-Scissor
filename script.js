@@ -7,11 +7,10 @@ let computerScore = 0;
 
 options.forEach((option) => {
     option.addEventListener("click", function () {
-        const pInput = this.alt; // Extract the choice (Rock, Paper, Scissors)
+        const pInput = this.alt; 
         const cOptions = ["Rock", "Paper", "Scissors"];
         const cInput = cOptions[Math.floor(Math.random() * 3)];
 
-        // Determine the winner
         let result;
         if (pInput === cInput) {
             result = "It's a tie! 🤝";
@@ -27,11 +26,9 @@ options.forEach((option) => {
             computerScore++;
         }
 
-        // Update the score
         playerScoreElem.textContent = playerScore;
         computerScoreElem.textContent = computerScore;
 
-        // Display the result with emojis
         resultElem.innerText = `${result}`;
     });
 });
